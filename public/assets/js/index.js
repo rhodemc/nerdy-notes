@@ -4,13 +4,16 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === "/notes") {
+if (window.location.pathname === "/notes.html") {
   noteTitle = document.querySelector(".note-title");
   noteText = document.querySelector(".note-textarea");
   saveNoteBtn = document.querySelector(".save-note");
   newNoteBtn = document.querySelector(".new-note");
   noteList = document.querySelectorAll(".list-container .list-group");
 }
+
+//q: when I load this app onto a live server, my buttons don't work. Why is that?
+//
 
 // Show an element
 const show = (elem) => {
