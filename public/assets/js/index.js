@@ -4,6 +4,8 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+//q: why doesn't this line of code work?
+//a:
 if (window.location.pathname === "/notes") {
   console.log("Operational, captain.");
   noteTitle = document.querySelector(".note-title");
@@ -12,9 +14,6 @@ if (window.location.pathname === "/notes") {
   newNoteBtn = document.querySelector(".new-note");
   noteList = document.querySelectorAll(".list-container .list-group");
 }
-
-//q: when I load this app onto a live server, my buttons don't work. Why is that?
-//
 
 // Show an element
 const show = (elem) => {
