@@ -1,19 +1,19 @@
 // dependencies
-const note = require("express").Router();
+const notes = require("express").Router();
 const fs = require("fs");
 const path = require("path");
 const uuid = require("uuid");
 
-// get route for db.json
-note.get("/api/notes", (req, res) => {
+// get request for db.json
+notes.get("/notes", (req, res) => {
   fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
     if (err) throw err;
     res.json(JSON.parse(data));
   });
 });
 
-// post route for db.json
-note.post("/api/notes", (req, res) => {
+// post request for db.json
+notes.post("/notes", (req, res) => {
   console.log(req.body);
 
   const { title, text } = req.body;
@@ -46,8 +46,8 @@ note.post("/api/notes", (req, res) => {
   }
 });
 
-// delete route for db.json
-note.delete("/api/notes/:id", (req, res) => {
+// BONUS - delete request for db.json
+notes.delete("/notes/:id", (req, res) => {
   const id = req.params.id;
   fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
     if (err) {
@@ -66,3 +66,5 @@ note.delete("/api/notes/:id", (req, res) => {
     }
   });
 });
+
+module.exports = notes;
