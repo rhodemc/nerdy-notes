@@ -5,6 +5,7 @@ body {
   padding: 0;
 }
 
+/* hidden until code it written to unhide it */
 .save-note {
   display: none;
 }
