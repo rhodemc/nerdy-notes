@@ -4,8 +4,6 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-//q: why doesn't this line of code work?
-//a:
 if (window.location.pathname === "/notes") {
   console.log("Operational, captain.");
   noteTitle = document.querySelector(".note-title");
