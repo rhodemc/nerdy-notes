@@ -32,7 +32,7 @@ Once navigated to the deployed site, you will find saved notes on the left and a
 
 Nerdy Notes was built with starter coded provided by Xandromus and the University of Oregon Coding Bootcamp.
 
-[This is an external link to the stater code repository](https://github.com/coding-boot-camp/miniature-eureka)
+[This is an external link to the starter code repository](https://github.com/coding-boot-camp/miniature-eureka)
 
 ## License
 
