@@ -26,7 +26,7 @@ N/A
 
 Once navigated to the deployed site, you will find saved notes on the left and a form to create a new note on the right. Please enter a title for your note as well as details. Once you have entered your note, click the save icon in the top right corner. Your note will be saved and appear on the left. To delete a note, click the trash icon next to the note you wish to delete.
 
-![Nerdy Notes - An Express note saver](/public/assets/images/nerdy-notes.png/nerdy-notes.png)
+![Nerdy Notes - An Express note saver](public/assets/images/nerdy-notes.png)
 
 ## Credits
 
