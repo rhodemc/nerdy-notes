@@ -5,7 +5,7 @@ const path = require("path");
 const uuid = require("uuid");
 
 // get request for db.json
-notes.get("/notes", (req, res) => {
+notes.get("/notes", (_req, res) => {
   fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
     if (err) throw err;
     res.json(JSON.parse(data));
@@ -16,14 +16,18 @@ notes.get("/notes", (req, res) => {
 notes.post("/notes", (req, res) => {
   console.log(req.body);
 
+  // destructure title and text from req.body
   const { title, text } = req.body;
 
+  // if there is a title and text, populate new note
   if (req.body) {
     const newNote = {
       title,
       text,
       id: uuid.v4(),
     };
+
+    // read db.json
     fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
       if (err) {
         console.log(err);
@@ -31,6 +35,7 @@ notes.post("/notes", (req, res) => {
         const parsedNotes = JSON.parse(data);
         parsedNotes.push(newNote);
 
+        // write to db.json
         fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(parsedNotes), (err) => {
           if (err) {
             console.log(err);
